@@ -129,6 +129,26 @@
 
         <p>Upon researching and socializing, I discovered a group of friends who play badminton. However, it usually takes me an hour and a half just to get to the badminton court.</p>
         <p>I often wonder why I have to drive so far to play a sport with my friends, but it seems there aren’t many alternatives. My research revealed a surprising scarcity of smaller facilities, especially compared to the vast networks of large gym monopolies. </p>
+    
+    <section id="scrolly-images" class="scrolly-container">
+        <div class="sticky-thing">
+            <img src="./assets/anytime-fitness-in-dmv.png">
+        </div>
+        <div class="steps-container">
+            <div class="step" id="step1">
+                <p>Day 1: Millions of students set up tents on South Lawn at around 4 am on April 17, pledging to occupy
+                    the space until the University divests from companies with ties to Israel.
+                </p>
+            </div>
+            <div class="step" id="step2">
+                <p>Day 2: University President Minouche Shafik authorized a sweep of the encampment on South Lawn at
+                    around 1 pm on April 18. Over 100 individuals were arrested by police, tents were moved to the
+                    opposite lawn.
+                </p>
+            </div>
+    </section>
+    
+    
         <ul>
             <li>One thing</li>
             <li>A second thing</li>
@@ -186,6 +206,119 @@
                 when you use it, and don't forget to change the <code>title</code> tag!!!</p>
         </div>
     </div>
+
+    <script>
+        /*************
+        
+        This is the JavaScript that makes the scrolly work 
+        
+        *************/
+
+        /* 
+        This part attaches a scroll to the element with id="scrolly-images"    
+        */
+        (() => {
+            const scroller = scrollama()
+
+            scroller
+                .setup({
+                    parent: document.querySelector("#scrolly-images"),
+                    step: ".step",
+                    offset: 0.6,
+                    debug: false,
+                })
+                .onStepEnter(function ({ element, index, direction }) {
+                    const event = new CustomEvent("stepin", { detail: { direction: direction } })
+                    element.dispatchEvent(event)
+                })
+                .onStepExit(function ({ element, index, direction }) {
+                    const event = new CustomEvent("stepout", { detail: { direction: direction } })
+                    if (direction === "up" && element.previousElementSibling) {
+                        const event = new CustomEvent("stepin", { detail: { direction: direction } })
+                        element.previousElementSibling.dispatchEvent(event)
+                    }
+                })
+
+            window.addEventListener("resize", scroller.resize)
+        })()
+
+        /*
+        This part sets up your actions. In this case, it's changing the image in the scrolly container.
+        */
+        document.addEventListener("DOMContentLoaded", function () {
+            // JavaScript code here
+            d3.select("#step1").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/anytime-fitness-in-dmv.png"); // Change image for step 1
+            });
+
+            d3.select("#step2").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/onelife-fitness-in-dmv.png"); // Change image for step 2
+            });
+
+        //     // For the section with fiery images
+        //     d3.select("#step3").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0419.png"); // Change image for step 1
+        //     });
+
+        //     d3.select("#step4").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0420.png"); // Change image for step 2
+        //     });
+        //     // For the section with gaven images
+        //     d3.select("#step5").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0421.png"); // Change image for step 1
+        //     });
+
+        //     d3.select("#step6").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0422.png"); // Change image for step 2
+        //     });
+        //     // For the section with mischief images
+        //     d3.select("#step7").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0423.png"); // Change image for step 1
+        //     });
+
+        //     d3.select("#step8").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0424.png"); // Change image for step 2
+        //     });
+        //     // For the section with subi images
+        //     d3.select("#step9").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0425.png"); // Change image for step 1
+        //     });
+
+        //     d3.select("#step10").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0426.png"); // Change image for step 2
+        //     });
+
+        //     d3.select("#step11").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0427.png"); // Change image for step 2
+        //     });
+
+        //     d3.select("#step12").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0428.png"); // Change image for step 2
+        //     });
+
+        //     d3.select("#step13").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0429.png"); // Change image for step 2
+        //     });
+
+        //     d3.select("#step14").on('stepin', (e) => {
+        //         d3.select("#scrolly-images img").attr("src", "./assets/0430.png"); // Change image for step 2
+        //     });
+
+        });
+    </script>
+    <style>
+        /* Change this to adjust the padding between steps */
+        .step {
+            margin-bottom: 100vh;
+
+        }
+    </style>
+
+
+
+
+
+
 </body>
 
 </html>
