@@ -267,18 +267,19 @@
     
     <section id="scrolly-images" class="scrolly-container">
         <div class="sticky-thing">
-            <img src="onelife.png">
+            <img src="dmv_map.png">
         </div>
         <div class="steps-container">
             <div class="step" id="step1">
-                <p>Day 1: years of students set up tents on South Lawn at around 4 am on April 17, pledging to occupy
-                    the space until the University divests from companies with ties to Israel.
+                <p>Here is the map of DMV. DMV is an abbreviation for the Washington metropolitan area, which includes the District of Columbia, Maryland, and Virginia (DC, MD, and VA). The area is also known as the National Capital Region
                 </p>
             </div>
             <div class="step" id="step2">
-                <p>Day 2: University President Minouche Shafik authorized a sweep of the encampment on South Lawn at
-                    around 1 pm on April 18. Over 100 individuals were arrested by police, tents were moved to the
-                    opposite lawn.
+                <p>There are 38 Onelife Fitness in the DMV area. 
+                </p>
+            </div>
+            <div class="step" id="step3">
+                <p>There are 84 Anytime Fitness in the DMV area. 
                 </p>
             </div>
     </section>
@@ -383,10 +384,13 @@
         document.addEventListener("DOMContentLoaded", function () {
             // JavaScript code here
             d3.select("#step1").on('stepin', (e) => {
-                d3.select("#scrolly-images img").attr("src", "./assets/onelife.png"); // Change image for step 1
+                d3.select("#scrolly-images img").attr("src", "./assets/dmv_map.png"); // Change image for step 1
             });
 
             d3.select("#step2").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/onelife.png"); // Change image for step 2
+            });
+            d3.select("#step3").on('stepin', (e) => {
                 d3.select("#scrolly-images img").attr("src", "./assets/anytimefitness.png"); // Change image for step 2
             });
 
