@@ -281,6 +281,9 @@
             <div class="step" id="step3">
                 <p>There are 84 Anytime Fitness in the DMV area. 
                 </p>
+            <div class="step" id="step3">
+                <p>There are 112 Planet Fitness in the DMV area. 
+                </p>
             </div>
     </section>
     
@@ -392,6 +395,9 @@
             });
             d3.select("#step3").on('stepin', (e) => {
                 d3.select("#scrolly-images img").attr("src", "./assets/anytimefitness.png"); // Change image for step 2
+            });
+            d3.select("#step4").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/planetfitness.png"); // Change image for step 2
             });
 
         //     // For the section with fiery images
