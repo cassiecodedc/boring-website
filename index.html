@@ -248,19 +248,21 @@
     <div class="content">
         <div class="header">
             <h1>Arlington: America's Fittest City—But Is It for Everyone?</h1>
-            <p class="subhead">We delve into how Arlington and its surrounding areas benefit outdoor exercise lovers, yet acknowledge those, like me, who may feel excluded. </p>
+            <p class="subhead"></p>
         </div>
         <div class="byline">
             <p>By <a href="https://www.cassiekexinhuang.com/">Cassie Huang</a></p>
         </div>
         <p>When I moved to Arlington, VA, from East Lansing, Michigan, I was thrilled to escape the cold weather. But what truly astonished me was how people here are always on the move. Quite literally. </p>
         <p>Walking, strolling, jogging, running, hiking, even kayaking (that’s another story)—residents in Arlington seem to spend most of their time on their feet. This vibrant, active lifestyle was a surprising change from what I was used to.</p>
-        <P> Figure out how to put a graphic about how people walk or something, here is the API for the chart, but you don't have to use it. https://www.walkscore.com/professional/travel-time-js-api.php#widget-example</P>
-        <iframe title="The biggest pumpkins, by state (Copy)" aria-label="Bar Chart" id="datawrapper-chart-MLQxw"
-            src="https://datawrapper.dwcdn.net/MLQxw/1/" scrolling="no" frameborder="0"
-            style="width: 0; min-width: 100% !important; border: none;" height="757" data-external="1"></iframe>
-        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r = 0; r < e.length; r++)if (e[r].contentWindow === a.source) { var i = a.data["datawrapper-height"][t] + "px"; e[r].style.height = i } } })) }();
-        </script>
+        <P>Apparently, Arlington has ranked as the fittest city in America for six consecutive years, with Washington, DC, following closely. Granted, the area boasts an abundance of parks, trails, and wide sidewalks to stay active.</P>
+        
+        <div class="full-width">
+            <figure>
+                <img
+                    src=./assets/2023-american-fitness-index-infographic-final.jpg>
+            </figure>
+        </div>      
 
         <p>Upon researching and socializing, I discovered a group of friends who play badminton. However, it usually takes me an hour and a half just to get to the badminton court.</p>
         <p>I often wonder why I have to drive so far to play a sport with my friends, but it seems there aren’t many alternatives. My research revealed a surprising scarcity of smaller facilities, especially compared to the vast networks of large gym monopolies. </p>
@@ -271,7 +273,7 @@
         </div>
         <div class="steps-container">
             <div class="step" id="step1">
-                <p>Here is the map of DMV. DMV is an abbreviation for the Washington metropolitan area, which includes the District of Columbia, Maryland, and Virginia (DC, MD, and VA). The area is also known as the National Capital Region
+                <p>Here is the map of DMV. DMV is an abbreviation for the Washington metropolitan area, which includes the District of Columbia, Maryland, and Virginia (DC, MD, and VA). The area is also known as the National Capital Region.
                 </p>
             </div>
             <div class="step" id="step2">
@@ -281,9 +283,22 @@
             <div class="step" id="step3">
                 <p>There are 84 Anytime Fitness in the DMV area. 
                 </p>
-            <div class="step" id="step3">
+            </div>
+            <div class="step" id="step4">
                 <p>There are 112 Planet Fitness in the DMV area. 
                 </p>
+            </div>
+            <div class="step" id="step5">
+                <p>The number of gyms in the DMV area is truly staggering.                   
+                </p>
+            </div>
+            <div class="step" id="step6">
+                <p>Within a 20-minute drive from where I live, there are eight gyms to choose from. 
+                </p>
+            </div>
+            <div class="step" id="step7">
+                <p>Yet, I still have to drive 1 hour and a half just to play badminton with my friends. 
+                </p>            
             </div>
     </section>
     
@@ -394,10 +409,19 @@
                 d3.select("#scrolly-images img").attr("src", "./assets/onelife.png"); // Change image for step 2
             });
             d3.select("#step3").on('stepin', (e) => {
-                d3.select("#scrolly-images img").attr("src", "./assets/anytimefitness.png"); // Change image for step 2
+                d3.select("#scrolly-images img").attr("src", "./assets/anytimefitness.png"); // Change image for step 3
             });
             d3.select("#step4").on('stepin', (e) => {
-                d3.select("#scrolly-images img").attr("src", "./assets/planetfitness.png"); // Change image for step 2
+                d3.select("#scrolly-images img").attr("src", "./assets/planetfitness.png"); // Change image for step 4
+            });
+            d3.select("#step5").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/everygym.png"); // Change image for step 5
+            });
+            d3.select("#step6").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/gymselection.png"); // Change image for step 5
+            });
+            d3.select("#step7").on('stepin', (e) => {
+                d3.select("#scrolly-images img").attr("src", "./assets/meandbadminton.png"); // Change image for step 5
             });
 
         //     // For the section with fiery images
