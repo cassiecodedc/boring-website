@@ -118,18 +118,18 @@
     <style>
         .scrolly-container {
             position: relative;
-            margin-bottom: auto;
+            margin-bottom: 1.2em;
         }
 
         .sticky-thing {
             position: sticky;
             top: 0;
-            transform: translate(0px, 0px);
-            transform: full-width;
+            transform: translate(100px, 100px);
+            transform: scale(1.0);
             z-index: 0;
-            height: -200svh;
-            width: 60vw;
-            margin: 1;
+            height: fit-content;
+            width: fit-content;
+            margin: 0;
             overflow: hidden;
             /* Center everything inside */
             display: flex;
@@ -268,7 +268,7 @@
     
     <section id="scrolly-images" class="scrolly-container">
         <div class="sticky-thing">
-            <img src="./assets/anytime-fitness-in-dmv.png">
+            <img src="onelife.png">
         </div>
         <div class="steps-container">
             <div class="step" id="step1">
@@ -384,11 +384,11 @@
         document.addEventListener("DOMContentLoaded", function () {
             // JavaScript code here
             d3.select("#step1").on('stepin', (e) => {
-                d3.select("#scrolly-images img").attr("src", "./assets/anytime-fitness-in-dmv.png"); // Change image for step 1
+                d3.select("#scrolly-images img").attr("src", "./assets/onelife.png"); // Change image for step 1
             });
 
             d3.select("#step2").on('stepin', (e) => {
-                d3.select("#scrolly-images img").attr("src", "./assets/onelife-fitness-in-dmv.png"); // Change image for step 2
+                d3.select("#scrolly-images img").attr("src", "./assets/anytimefitness.png"); // Change image for step 2
             });
 
         //     // For the section with fiery images
